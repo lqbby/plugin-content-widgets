@@ -52,7 +52,8 @@ public class ContentWidgetsHeadProcessor implements TemplateHeadProcessor {
             @media print{${widgetTags}{visibility:visible}}
             </style>
             <noscript><style>${widgetTags}{visibility:visible!important}</style></noscript>
-            <script type="module" src="/plugins/${name}/assets/static/content-widgets-loader.js?version=${version}"></script>
+            <link rel="stylesheet" href="/plugins/${name}/assets/static/content-widgets.css?version=${version}">
+            <script src="/plugins/${name}/assets/static/content-widgets.iife.js?version=${version}"></script>
             <!-- plugin-content-widgets end -->
             """, properties);
     }
